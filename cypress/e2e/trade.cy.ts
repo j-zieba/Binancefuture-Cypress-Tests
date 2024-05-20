@@ -14,7 +14,7 @@ describe('Market Orders Tests', () => {
   const X_BTC = '0.020';
   const Y_BTC = '0.040';
   const TOTAL_BTC = '0.060';
-  const email = Cypress.env('username');
+  const email = Cypress.env('email');
   const password = Cypress.env('password');
 
   beforeEach(() => {
@@ -32,21 +32,21 @@ describe('Market Orders Tests', () => {
     cy.visit('en/futures/BTCUSDT');
   });
 
-  // it('should buy X BTC at market price', () => {
-  //     marketPage.selectBidType('market');
-  //     marketPage.buy(X_BTC);
-  //     marketPage.verifyPosition(X_BTC);
-  // });
+  it('should buy X BTC at market price', () => {
+      marketPage.selectBidType('market');
+      marketPage.buy(X_BTC);
+      marketPage.verifyPosition(X_BTC);
+  });
 
-  // it('should buy additional Y BTC at market price', () => {
-  //     marketPage.selectBidType('market');
-  //     marketPage.buy(Y_BTC);
-  //     marketPage.verifyPosition(TOTAL_BTC);
-  // });
+  it('should buy additional Y BTC at market price', () => {
+      marketPage.selectBidType('market');
+      marketPage.buy(Y_BTC);
+      marketPage.verifyPosition(TOTAL_BTC);
+  });
 
-  // it('should close position at market price', () => {
-  //     marketPage.closePosition('market');
-  // });
+  it('should close position at market price', () => {
+      marketPage.closePosition('market');
+  });
 
   it('should verify order history for correct transactions', () => {
     marketPage.verifyLastTransactions(2, 'Sell', TOTAL_BTC);

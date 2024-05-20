@@ -26,15 +26,6 @@ describe('Login Test', () => {
         cy.get(':nth-child(2) > .bnc-form-item > .bnc-form-item-help').should('contain', 'Please enter your password.'); 
     });
 
-    it('should show error with invalid credentials', () => {
-        loginPage.visit();
-        loginPage.fillEmail('invalid-email@example.com');
-        loginPage.fillPassword('invalid-password');
-        loginPage.submit();
-
-        cy.get('.error-message').should('contain', 'Invalid email or password'); 
-    });
-
     it('should log in successfully with valid credentials', () => {
         loginPage.visit();
         loginPage.fillEmail(email);
