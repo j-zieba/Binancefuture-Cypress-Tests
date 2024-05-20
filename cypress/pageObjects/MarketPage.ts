@@ -7,20 +7,20 @@ interface Transaction {
 }
 
 export class MarketPage {
-    private bidTypeMarket = '#tab-MARKET > .tab'; // Zmień tryb składania pozycji na Market
-    private bidTypeLimit = '#tab-LIMIT > .tab'; // Zmień tryb składania pozycji na Limit
-    private bidTypeStop = '#tab-STOP > .tab'; // Zmień tryb składania pozycji na Stop
-    private amountInput = '.order-form-input[name=unitAmount]'; // Selektor pola ilości
-    private buyButton = 'form > div button:first-child'; // Brzydki selector dla przycisku kupna
-    private positionBody = '.position-row.body'; // Kontener, który przechowuje pozycje
-    private currentWallet = '.size-buy'; // Aktualna suma pozycji
+    private bidTypeMarket = '#tab-MARKET > .tab';
+    private bidTypeLimit = '#tab-LIMIT > .tab';
+    private bidTypeStop = '#tab-STOP > .tab'; 
+    private amountInput = '.order-form-input[name=unitAmount]';
+    private buyButton = 'form > div button:first-child'; 
+    private positionBody = '.position-row.body'; // container with wallet positions
+    private currentWallet = '.size-buy'; 
     private closePositionContainer = '.closePosition';
-    private closePositionMarketButton = '.closePosition > div > button:first-child'; // Przycisk zamknięcia po cenie marketu
-    private closePositionLimitButton = '.closePosition > div > button:nth-child(2)'; // Przycisk zamknięcia po cenie limitu
-    private limitPriceInput = '.closePosition > div > div > input[type="number"]'; // Pole wejściowe ceny limitu
-    private btcAmountInput = '.closePosition > div > div > div > input'; // Pole wejściowe ilości BTC
-    private orderHistoryTab = 'div[data-testid="OrderHistory"]'; // Tab for order history
-    private positionTab = 'div[data-testid="Positions"]'; // Tab for Posistions 
+    private closePositionMarketButton = '.closePosition > div > button:first-child';
+    private closePositionLimitButton = '.closePosition > div > button:nth-child(2)'; 
+    private limitPriceInput = '.closePosition > div > div > input[type="number"]'; 
+    private btcAmountInput = '.closePosition > div > div > div > input'; 
+    private orderHistoryTab = 'div[data-testid="OrderHistory"]';
+    private positionTab = 'div[data-testid="Positions"]';
     private transactionRow = '[data-testid="DataTable"] > div:nth-child(2) > div:nth-child(2) > div.css-16vu25q';
     private transactionColumns = 'div.css-pru252 > div';
     
